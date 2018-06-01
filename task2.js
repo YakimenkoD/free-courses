@@ -1,6 +1,6 @@
 /* Task 2 */
-var w = String(process.argv[2]);
-var k = Number(process.argv[3]);
+var w = String(process.argv[1]);
+var k = Number(process.argv[2]);
 
 
 function caesar(word, shift) {
@@ -14,4 +14,3 @@ function caesar(word, shift) {
 }
 
 process.stdout.write((caesar(w, k)).toString());
-/* Put your code here */
