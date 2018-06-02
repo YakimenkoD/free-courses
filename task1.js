@@ -7,4 +7,4 @@ while (c <= n) {
   sum += Math.pow(c, e);
   c++;
 };
-process.stdout.write(sum.toString());
+console.log(sum.toString());
