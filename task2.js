@@ -13,4 +13,4 @@ function caesar(word, shift) {
 	return result;
 }
 
-console.log((caesar(w, k)).toString());
+process.stdout.write((caesar(w, k)).toString())
