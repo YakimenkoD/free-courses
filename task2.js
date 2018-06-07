@@ -1,4 +1,3 @@
-/* Task 2 */
 var w = String(process.argv[1]);
 var k = Number(process.argv[2]);
 

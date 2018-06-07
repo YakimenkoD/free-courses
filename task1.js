@@ -1,4 +1,3 @@
-/* Task 1 */
 var n = Number(process.argv[1]);
 var e = Number(process.argv[2]);
 var c = 1;
