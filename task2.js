@@ -1,15 +1,19 @@
 var w = String(process.argv[2]);
 var k = Number(process.argv[3]);
 
-function caesar(word, shift) {
-	var result = "";
-	for (var i = 0; i < word.length; i++) {
-		var c = word.charCodeAt(i);
-		if (65 <= c && c <=  90) {
-			result += String.fromCharCode((c - 65 + shift) % 26 + 65);
-		} else if (97 <= c && c <= 122) {
-			result += String.fromCharCode((c - 97 + shift) % 26 + 97);
+var caesarShift = function(str, shift) {
+	var output = '';
+	for (var i = 0; i < str.length; i ++) {
+		var c = str[i];
+		if (c.match(/[a-z]/i)) {
+			var code = str.charCodeAt(i);
+			if ((code >= 65) && (code <= 90))
+				c = String.fromCharCode(((code - 65 + shift) % 26) + 65);
+			else if ((code >= 97) && (code <= 122))
+				c = String.fromCharCode(((code - 97 + shift) % 26) + 97);
 		}
-	} return result;
-}
-console.log(caesar(w, k));
+		output += c;
+	}
+	return output;
+};
+console.log(caesarShift(w, k))
